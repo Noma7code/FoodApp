@@ -6,7 +6,7 @@ export default function FoodDetail({ foodId }) {
   const [food, setFood] = useState({});
   const [isLoading, setLoading] = useState(true);
   const url = `https://api.spoonacular.com/recipes/${foodId}/information`;
-  const API_KEY = "8963da096c0c4c67a39a5ec8d333a58b";
+  const API_KEY = import.meta.env.VITE_SPOONACULAR_API_KEY;
 
   useEffect(() => {
     async function fetchFoodDetail() {
@@ -48,8 +48,7 @@ export default function FoodDetail({ foodId }) {
           </span>
         </div>
         {/* acess the analyzedInstructions property of food => steps =>maps through each steps represented by step then you display the step(from food object) of  the step(the map parameter) */}
-        <ItemList food={food} isLoading={isLoading}/>
-        
+        <ItemList food={food} isLoading={isLoading} />
 
         <h2>Instructions</h2>
         <div className={styles.recipeInstructions}>

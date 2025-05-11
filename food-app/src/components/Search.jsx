@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import styles from "./search.module.css";
 const url = "https://api.spoonacular.com/recipes/complexSearch";
-const API_KEY = "8963da096c0c4c67a39a5ec8d333a58b";
+const API_KEY = import.meta.env.VITE_SPOONACULAR_API_KEY;
 // const url = "https://www.themealdb.com/api/json/v1/1/search.php";
 //api keys should be placed in env vairables
 // const API_KEY = " f76eedfebfb14ad99fab9e4ec1d1ea61";
