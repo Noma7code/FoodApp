@@ -29,5 +29,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-VITE_SPOONACULAR_API_KEY=8963da096c0c4c67a39a5ec8d333a58b
